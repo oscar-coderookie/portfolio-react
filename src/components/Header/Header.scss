@@ -31,11 +31,32 @@
         }
 
     }
+    &__language{
+        // position: absolute;
+        right: 0;
+        font-size: 26px;
+        border: none;
+        background: none;
+    }
+    &__flag{
+        width: 40px
+    }
+    &__language-container{
+        position: absolute;
+        right: 0;
+        display: flex;
+        margin-right: 30px;
+    }
   }
   .back-btn {
       position: absolute;
       left: 0;
       margin-left: 30px;
-      font-size: 30px;
+      font-size: 26px;
+
+      @media (max-width: 768px) {
+          font-size:18px
+          
+      }
   }
   

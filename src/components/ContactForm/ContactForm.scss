@@ -9,7 +9,6 @@
     &__block1{
         padding: 30px;
     
-    
     }
     &__container{
         display: flex;
@@ -40,6 +39,21 @@
         font-size: 30px;
         color: rgb(94, 94, 94);
         margin-right: 10px;
+        
+    }
+
+    @media (max-width: 768px ) {
+        &__fields{
+            padding: 4px 20px;
+            width:100%;
+        }
+        &__info,
+        &__legend{
+            font-size:16px;
+        }
+        &__icon{
+            font-size:20px;
+        }
         
     }
 }

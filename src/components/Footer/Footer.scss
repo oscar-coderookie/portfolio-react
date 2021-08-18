@@ -43,3 +43,24 @@
     padding-bottom: 6px;
   }
 }
+.animation-logo{
+  animation: rotation 8s  infinite;
+}
+
+@keyframes rotation {
+
+  0%{
+    transform:rotateZ(0deg)
+     
+      
+  }
+  
+  50%{
+    transform:rotateZ(360deg) ;
+    font-size:30px;
+  }
+ 
+  100%{
+    transform:rotateZ(720deg)
+  }
+}

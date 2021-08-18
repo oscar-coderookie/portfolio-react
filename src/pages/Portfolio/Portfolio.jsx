@@ -1,6 +1,7 @@
 import "./Portfolio.scss";
 import CardComponent from "../../components/CardComponent/CardComponent";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const technologicStack = [
   {
@@ -46,6 +47,8 @@ const technologicStack = [
 ];
 
 const Portfolio = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="portfolio">
       <div className="portfolio-container">

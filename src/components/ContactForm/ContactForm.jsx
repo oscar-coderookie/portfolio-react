@@ -1,16 +1,21 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLocationArrow, faMailBulk, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 import "./ContactForm.scss";
 
+
+
+
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   return (
     <div action="" className="contact-form">
       <div className="contact-form__block1">
-        <h1 className="contact-form__title">Contact Me..</h1>
+        <h1 className="contact-form__title">{t("contact_title.1")}</h1>
         <p className="contact-form__legend">
-          For making new projects or colaborating with other partners and developers, if youre interested in my jobs,
-          please leave me a message: 😀
+          {t("contact_text.1")}
         </p>
         <div className="contact-form__container">
           <div className="contact-form__fields">
@@ -23,7 +28,7 @@ const ContactForm = () => {
           </div>
           <div className="contact-form__fields">
             <FontAwesomeIcon className="contact-form__icon" icon={faLocationArrow} />
-            <p className="contact-form__info">29006, Málaga Spain</p>
+            <p className="contact-form__info">{t("location.1")}</p>
           </div>
           <div className="contact-form__fields">
             <FontAwesomeIcon className="contact-form__icon" icon={faInstagram} />
