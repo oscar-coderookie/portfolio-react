@@ -7,7 +7,7 @@
     position: absolute;
 
     &__navbar{
-        width: 100%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,5 +31,11 @@
         }
 
     }
+  }
+  .back-btn {
+      position: absolute;
+      left: 0;
+      margin-left: 30px;
+      font-size: 30px;
   }
   

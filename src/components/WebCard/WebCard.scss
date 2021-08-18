@@ -1,0 +1,40 @@
+.webcard{
+    display: flex;
+    width: 600px;
+    height:400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: red;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__img-container{
+        width:100%;
+        height:100%;
+        position: relative;
+        
+    }
+    &__info{
+        display:flex;
+        flex-direction: column;
+        margin: 10px;
+        position: absolute;
+        bottom: 0;
+    }
+    &__thumb{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+
+    @media (max-width: 1024px) {
+        height: 280px;
+        width:420px;
+        justify-content: center;
+        
+    }
+}

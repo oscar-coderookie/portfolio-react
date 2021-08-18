@@ -1,12 +1,18 @@
 .home{
     height:100vh;
     background: linear-gradient(to bottom,rgb(201, 201, 201), rgb(240, 240, 240) , rgb(190, 190, 190));
-    
     align-items: center;
     display: flex;
     justify-content: center;
 
     &__logo{
         width:600px;
+    }
+    
+    @media (max-width: 768px) {
+        &__logo{
+            width:300px;
+        }
+  
     }
 }

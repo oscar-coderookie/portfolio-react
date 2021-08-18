@@ -1,17 +1,16 @@
-import Card from "react-bootstrap/Card";
-import './CardComponent.scss';
+import "./CardComponent.scss";
 
 const CardComponent = (props) => {
   return (
-    <Card style={{backgroundColor: props.color}} className="card-block">
-      <Card.Img variant="top" src={props.imageUrl} className="card-block__img"/>
-      <Card.Body className="card-block__body">
-        <Card.Title className="card-block__title">{props.skill}</Card.Title>
-        <Card.Text className="card-block__text">
-          {props.legendText}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+    <div style={{ backgroundColor: props.color, color: props.textColor }} className="card-block">
+      <img src={props.imageUrl} alt="images" className="card-block__img" />
+      <div className="card-block__body">
+        <h4 className="card-block__title">{props.skill}</h4>
+      </div>
+      <figure className="card-block__hover" style={{ backgroundColor: props.cardColor}}>
+        <p className="card-block__legend">{props.legendText}</p>
+      </figure>
+    </div>
   );
 };
 

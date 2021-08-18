@@ -1,6 +1,5 @@
 import "./Portfolio.scss";
 import CardComponent from "../../components/CardComponent/CardComponent";
-import { Container, Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const technologicStack = [
@@ -8,54 +7,70 @@ const technologicStack = [
     id: 1,
     title: "React Js",
     imageUrl: "https://img.icons8.com/color/240/000000/react-native.png",
-    backgroundColor: "#EFEFEF",
+    backgroundColor: "#E4E4E4",
     legend: "Projects developed in React JS",
+    href: "/work/react",
+    textColor: "#E4E4E4",
+    cardColor: "#80DEEA"
   },
   {
     id: 2,
     title: "NodeJs",
     imageUrl: "https://img.icons8.com/color/144/000000/nodejs.png",
-    backgroundColor: "#787878",
+    backgroundColor: "#BFBFBF",
     legend: "Projects developed in Nodejs",
+    href: "/work/nodejs",
+    textColor: "#E4E4E4",
+    cardColor: "#4CAF50"
   },
   {
     id: 3,
     title: "Angular",
     imageUrl: "https://img.icons8.com/color/144/000000/angularjs.png",
-    backgroundColor: "#EFEFEF",
+    backgroundColor: "#A7A7A7",
     legend: "Projects developed in Angular",
+    href: "/work/angular",
+    textColor: "#E4E4E4",
+    cardColor: "#DD2C00"
   },
   {
     id: 4,
     title: "HTML & CSS",
     imageUrl: "https://img.icons8.com/color/144/000000/html-5--v1.png",
-    backgroundColor: "#787878",
-    legend: "Projects developed in HTML",
+    backgroundColor: "#929292",
+    legend: "Projects developed in HTML & CSS",
+    href: "/work/html",
+    textColor: "#E4E4E4",
+    cardColor: "#FF6D00"
   },
 ];
 
 const Portfolio = () => {
   return (
     <div className="portfolio">
-      <Container>
-        <Row>
+      <div className="portfolio-container">
+
+      
           {technologicStack.map((stack) => {
             return (
-              <Col>
-                <NavLink className="header__link" exact to="/work/:id">
+           
+                <NavLink className="portfolio__links" exact to={stack.href}>
                   <CardComponent
                     color={stack.backgroundColor}
+                    textColor={stack.textColor}
                     imageUrl={stack.imageUrl}
                     skill={stack.title}
                     legendText={stack.legend}
-                    key={JSON.stringify(stack.id)}
+                    key={stack.id}
+                    cardColor={stack.cardColor}
+                    
                   />
                 </NavLink>
-              </Col>
+        
             );
           })}
-        </Row>
-      </Container>
+       
+          </div>
     </div>
   );
 };

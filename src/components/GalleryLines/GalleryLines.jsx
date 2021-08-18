@@ -21,6 +21,7 @@ const GalleryLines = (props) => {
     >
       {props.array.map((screen) => {
         return (
+          
           <SwiperSlide>
             <img className="swiper__img" style={{height: props.height, width: props.width}} src={screen.image} alt={screen.name} />
           </SwiperSlide>

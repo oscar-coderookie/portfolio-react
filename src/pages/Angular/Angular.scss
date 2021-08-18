@@ -1,0 +1,19 @@
+.angular{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 1024px) {
+        justify-content:center;
+        
+    }
+}
