@@ -1,0 +1,45 @@
+.contact-form{
+    display: flex;
+    &__title{
+       margin-bottom: 20px;
+       text-transform: uppercase;
+       color:rgb(122, 122, 122);
+    }
+
+    &__block1{
+        padding: 30px;
+    
+    
+    }
+    &__container{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__fields{
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        margin: 10px 0px; 
+        background: rgba(255, 255, 255, 0.616);   
+        padding: 10px 30px;   
+        border-radius: 8px; 
+    }
+    &__info,
+    &__legend{
+        margin:20px 0px;
+        padding: 0;
+        color:rgb(94, 94, 94);
+        font-weight: 500;
+        font-size:18px;
+        
+    }
+    &__icon{
+        font-size: 30px;
+        color: rgb(94, 94, 94);
+        margin-right: 10px;
+        
+    }
+}

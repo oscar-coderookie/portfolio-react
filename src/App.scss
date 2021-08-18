@@ -1,0 +1,15 @@
+.app {
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+.app_header{
+  position: absolute;
+}
+.app_footer{
+  position: absolute;
+}
+
+
+@import "~bootstrap/scss/bootstrap";
+
