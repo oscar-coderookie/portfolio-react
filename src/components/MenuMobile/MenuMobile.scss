@@ -39,6 +39,8 @@
     right: 0;
     font-size: 26px;
     border: none;
+    display: flex;
+    align-items: center;
     background: none;
   }
   &__flag {
@@ -46,10 +48,11 @@
   }
   &__language-container {
     position: absolute;
+    align-items: center;
+    justify-content: center;
     right: 0;
-    flex-direction: column;
     display: flex;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
 .back-btn {
@@ -59,6 +62,12 @@
   font-size: 26px;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+   
+      font-size: 18px;
+    
+    
+    &__language-container {
+      margin-right: 10px;
+    }
   }
 }

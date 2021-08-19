@@ -1,5 +1,5 @@
 import "./App.scss";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Angular from "./pages/Angular/Angular";
 import NodeJs from "./pages/NodeJs/NodeJs";
+import NodeJsDetail from "./pages/NodeJsDetail/NodeJsDetail";
 import Html from "./pages/Html/Html";
 import MenuMobile from "./components/MenuMobile/MenuMobile";
 
@@ -44,16 +45,19 @@ function App() {
         <div className="app">
           {!breakpoint ? <MenuMobile /> : null}
           {breakpoint ? <Header className="app_header" /> : null}
+          <Suspense fallback={<div>Loading...</div>} >
+            <Switch>
+              <Route exact path="/" render={(props) => <Home {...props} />} />
+              <Route exact path="/work" render={() => <Portfolio />} />
+              <Route exact path="/work/angular" render={() => <Angular />} />
+              <Route exact path="/work/react" render={() => <ReactComponent />} />
+              <Route exact path="/work/nodejs" render={(props) => <NodeJs {...props} />} />
+              <Route exact path="/work/nodejs/:id" render={(props) => <NodeJsDetail {...props} />} />
+              <Route exact path="/work/html" render={() => <Html />} />
+              <Route exact path="/contact" render={() => <Contact />} />
+            </Switch>
+          </Suspense>
 
-          <Switch>
-            <Route exact path="/" render={(props) => <Home {...props} />} />
-            <Route exact path="/work" render={() => <Portfolio />} />
-            <Route exact path="/work/angular" render={() => <Angular />} />
-            <Route exact path="/work/react" render={() => <ReactComponent />} />
-            <Route exact path="/work/nodejs" render={() => <NodeJs />} />
-            <Route exact path="/work/html" render={() => <Html />} />
-            <Route exact path="/contact" render={() => <Contact />} />
-          </Switch>
           <Footer className="app_footer" />
         </div>
       </Router>

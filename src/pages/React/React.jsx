@@ -9,6 +9,7 @@ const React = () => {
       {ReactJsProjects.map((react) => {
         return (
           <WebCard
+            hrefGallery={`/work/react/${react.id}`}
             backgroundColor="#edf0f2"
             thumbnail={react.thumb}
             title={react.title}

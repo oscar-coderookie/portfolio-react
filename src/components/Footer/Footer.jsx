@@ -8,7 +8,7 @@ const Footer = () => {
     const $$image = document.querySelector('[data-fn="logo-animate"]');
     $$image.setAttribute("class", "animation-logo footer__icons");
   };
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="footer">
