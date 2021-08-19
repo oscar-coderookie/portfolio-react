@@ -1,11 +1,25 @@
-import './React.scss';
+import ReactJsProjects from "../../mocks/ReactJsProjects";
+import WebCard from "../../components/WebCard/WebCard";
+
+import "./React.scss";
 
 const React = () => {
-    return ( 
-        <div className="react">
-        <h1 style={{textAlign: 'center'}}>Im React Jobs page</h1>
-        </div>
-     );
-}
- 
+  return (
+    <div className="react">
+      {ReactJsProjects.map((react) => {
+        return (
+          <WebCard
+            backgroundColor="#edf0f2"
+            thumbnail={react.thumb}
+            title={react.title}
+            deployUrl={react.deploy}
+            repositorie={react.repository}
+            key={react.id}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
 export default React;

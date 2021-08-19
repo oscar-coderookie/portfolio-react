@@ -41,12 +41,12 @@ const MenuMobile = () => {
           <FontAwesomeIcon icon={faAddressBook} className="mobile__icons"/>
           </NavLink>
         )}
-        <div className="header__language-container">
-          <button className="header__language" onClick={() => handleClick("en")}>
-            <img className="header__flag" src={spain} alt="spanish" />
+        <div className="mobile__language-container">
+          <button className="mobile__language" onClick={() => handleClick("en")}>
+            <img className="mobile__flag" src={spain} alt="spanish" />
           </button>
-          <button className="header__language" onClick={() => handleClick("es")}>
-            <img className="header__flag" src={uk} alt="english" />
+          <button className="mobile__language" onClick={() => handleClick("es")}>
+            <img className="mobile__flag" src={uk} alt="english" />
           </button>
         </div>
       </nav>

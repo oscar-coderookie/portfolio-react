@@ -9,11 +9,11 @@ const Angular = () => {
         {AngularPages.map((page) => {
           return (
             <WebCard
+              backgroundColor="#edf0f2"
               thumbnail={page.thumb}
               title={page.title}
               deployUrl={page.url}
               repositorie={page.repositorie}
-              description={page.description}
               key={page.id}
             />
           );

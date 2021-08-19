@@ -4,7 +4,7 @@ const AngularPages = [
 
     {
         id: uuidv4(),
-        title: "Game of Thrones - Website",
+        title: "Game of Thrones Web",
         images: [
             'https://firebasestorage.googleapis.com/v0/b/api-rest-curriculum-oscar.appspot.com/o/PORTFOLIO%2FWEB-DEVELOPMENT%2FGOT-ANGULAR%2FGOT-1.jpg?alt=media&token=c2cd1997-f18d-4d33-aac3-3e6d708ff4e7', 
             'https://firebasestorage.googleapis.com/v0/b/api-rest-curriculum-oscar.appspot.com/o/PORTFOLIO%2FWEB-DEVELOPMENT%2FGOT-ANGULAR%2FGOT-2.jpg?alt=media&token=42c91a8d-d134-4b6c-b54a-a3f47845406a',
@@ -19,7 +19,7 @@ const AngularPages = [
     },
     {
         id: uuidv4(),
-        title: "Harry Potter - Fan Page",
+        title: "Harry Potter Web",
         images: [
             "https://firebasestorage.googleapis.com/v0/b/api-harry-potter-df7f3.appspot.com/o/HARRY-POTTER%2FSnapshots%2Fhp-page%20(1).png?alt=media&token=2ee87a63-4053-4f1d-ad20-5c21c3413ddd",
             "https://firebasestorage.googleapis.com/v0/b/api-harry-potter-df7f3.appspot.com/o/HARRY-POTTER%2FSnapshots%2Fhp-page%20(2).png?alt=media&token=698eea95-81cc-4b2a-abc3-efef7fc89c56",

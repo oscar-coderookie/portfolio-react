@@ -26,8 +26,14 @@
     "location": {
         "1": "29006 - Málaga Spain"
     },
-    "legend_stack1": {
-        "1": "Projects developed in React JS"
+    "legend_stack": {
+        "1": "Projects developed in "
+    },
+    "web deploy" : {
+        "1": "Web Deploy: "
+    },
+    "repository":{
+        "1": "Repository: "
     }
 
 }
