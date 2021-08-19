@@ -1,0 +1,39 @@
+{
+    "Thanks": {
+        "1": "Thank"
+    },
+    "Why":  {
+        "1": "For watching this video"
+    },
+    "Portfolio": {
+        "1": "Portfolio"
+    },
+    "Contact": {
+        "1": "Contact"
+    },
+    "Home": {
+        "1": "Home"
+    },
+    "Dev with" : {
+        "1": "Dev with"
+    },
+    "contact_title": {
+        "1": "Leave me a Feed"
+    },
+    "contact_text": {
+        "1": "For making new projects or colaborating with other partners and developers, if youre interested in my jobs, please leave me a message:😀"
+    },
+    "location": {
+        "1": "29006 - Málaga Spain"
+    },
+    "legend_stack": {
+        "1": "Projects developed in "
+    },
+    "web deploy" : {
+        "1": "Web Deploy: "
+    },
+    "repository":{
+        "1": "Repository: "
+    }
+
+}

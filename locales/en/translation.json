@@ -1,0 +1,39 @@
+{
+    "Thanks": {
+        "1": "Gracias"
+    },
+    "Why":  {
+        "1": "Por ver este video"
+    },
+    "Portfolio": {
+        "1": "Portafolio"
+    },
+    "Contact": {
+        "1": "Contacto"
+    },
+    "Home": {
+        "1": "Inicio"
+    },
+    "Dev with" : {
+        "1": "Desarrollado con:"
+    },
+    "contact_title": {
+        "1": "Déjame un Mensaje"
+    },
+    "contact_text": {
+        "1": "Si estás interesado en contactarme o deseas trabajar conmigo, lo que tú prefieras, espero un mensaje en cualquiera de mis redes:😀"
+    },
+    "location": {
+        "1": "29006 - Málaga España"
+    },
+    "legend_stack": {
+        "1": "Proyectos desarrollados en "
+    },
+    "web deploy" : {
+        "1": "Web Desplegada: "
+    },
+    "repository":{
+        "1": "Repositorio: "
+    }
+
+}
