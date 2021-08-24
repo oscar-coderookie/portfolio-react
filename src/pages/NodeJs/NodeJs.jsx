@@ -1,11 +1,23 @@
+import { useEffect, useState } from "react";
 import WebCard from "../../components/WebCard/WebCard";
-import NodeJsProjects from "../../mocks/NodeJsProjects";
+import { getNodejsProjects } from "../../db/nodejs";
 import "./NodeJs.scss";
 
-const NodeJs = () => {
+const NodeJs = (id) => {
+  const [nodeProjects, setNodeProjects] = useState([]);
+
+  useEffect(() => {
+    if (id) {
+      getNodejsProjects(id).then((projects) => {
+        setNodeProjects(projects);
+      });
+    }
+  }, [id]);
+  
+
   return (
     <div className="node">
-      {NodeJsProjects.map((node) => {
+      {nodeProjects.map((node) => {
         return (
           
             <WebCard
@@ -15,7 +27,7 @@ const NodeJs = () => {
               title={node.title}
               deployUrl={node.deploy}
               repositorie={node.repository}
-              key={toString(node.id)}
+              key={node.id}
             />
         );
       })}

@@ -1,21 +1,30 @@
-import './NodeJsDetail.scss';
-import { useParams, useLocation } from 'react-router-dom';
+import "./NodeJsDetail.scss";
+import { useEffect, useState } from "react";
+import GalleryLines from './../../components/GalleryLines/GalleryLines';
+import { getNodejsById } from "../../db/nodejs";
+import { useParams } from "react-router";
 
-const NodeJsDetail = (props) => {
-    let location = useLocation();
+const NodeJsDetail = () => {
+  const [nodeDetails, setNodeDetails] = useState();
+  const { id } = useParams();
 
-    const {id} = useParams()
-    console.log(props);
+  useEffect(() => {
+    getNodejsById(id).then((nodeProjects) => {
+      setNodeDetails(nodeProjects);
+    });
+  }, []);
+  console.log(nodeDetails);
 
-    
+  const gallery = nodeDetails.images;
 
-    return ( 
-        <div className="nodejs-detail">
-        <h1>{location.pathname}</h1>
-        {props.title}
-            
-        </div>
-     );
-}
- 
+  return (
+    <div className="nodejs-detail">
+      <h1>{nodeDetails.id}</h1>
+      <h2>{nodeDetails.title}</h2>
+      <h3>{nodeDetails.thumb}</h3>
+      <GalleryLines/>
+    </div>
+  );
+};
+
 export default NodeJsDetail;

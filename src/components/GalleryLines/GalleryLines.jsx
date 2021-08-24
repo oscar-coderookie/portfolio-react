@@ -15,18 +15,18 @@ const GalleryLines = (props) => {
       effect="fade"
       slidesPerView={1}
       allowTouchMove={true}
-      scrollbar={{ visible: false }}
+      scrollbar={ false }
+      
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-    >
-      {props.array.map((screen) => {
-        return (
-          
-          <SwiperSlide>
-            <img className="swiper__img" style={{height: props.height, width: props.width}} src={screen.image} alt={screen.name} />
-          </SwiperSlide>
-        );
-      })}
+    > {props.array.map((image)=> {
+      return (
+        <SwiperSlide>
+        <img className="swiper__img" style={{height: props.height, width: props.width}} src={image} alt={image} key={image} />
+        </SwiperSlide>
+      )
+    })}
+    
     </Swiper>
   );
 };

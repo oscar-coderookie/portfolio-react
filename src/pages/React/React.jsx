@@ -1,9 +1,11 @@
 import ReactJsProjects from "../../mocks/ReactJsProjects";
 import WebCard from "../../components/WebCard/WebCard";
 
+
 import "./React.scss";
 
-const React = () => {
+const React = (id) => {
+  
   return (
     <div className="react">
       {ReactJsProjects.map((react) => {

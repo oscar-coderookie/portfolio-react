@@ -13,6 +13,7 @@ import NodeJs from "./pages/NodeJs/NodeJs";
 import NodeJsDetail from "./pages/NodeJsDetail/NodeJsDetail";
 import Html from "./pages/Html/Html";
 import MenuMobile from "./components/MenuMobile/MenuMobile";
+import ReactDetail from "./pages/ReactDetail/ReactDetail"
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
@@ -48,13 +49,14 @@ function App() {
           <Suspense fallback={<div>Loading...</div>} >
             <Switch>
               <Route exact path="/" render={(props) => <Home {...props} />} />
-              <Route exact path="/work" render={() => <Portfolio />} />
-              <Route exact path="/work/angular" render={() => <Angular />} />
-              <Route exact path="/work/react" render={() => <ReactComponent />} />
+              <Route exact path="/work" render={(props) => <Portfolio  {...props} />} />
+              <Route exact path="/work/angular" render={(props) => <Angular {...props}  />} />
+              <Route exact path="/work/react" render={(props) => <ReactComponent {...props}  />} />
+              <Route exact path="/work/react/:id" render={(props) => <ReactDetail {...props} />} />
               <Route exact path="/work/nodejs" render={(props) => <NodeJs {...props} />} />
               <Route exact path="/work/nodejs/:id" render={(props) => <NodeJsDetail {...props} />} />
-              <Route exact path="/work/html" render={() => <Html />} />
-              <Route exact path="/contact" render={() => <Contact />} />
+              <Route exact path="/work/html" render={(props) => <Html {...props}  />} />
+              <Route exact path="/contact" render={(props) => <Contact {...props}  />} />
             </Switch>
           </Suspense>
 
