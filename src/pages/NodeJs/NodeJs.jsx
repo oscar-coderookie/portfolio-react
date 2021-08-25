@@ -3,34 +3,38 @@ import WebCard from "../../components/WebCard/WebCard";
 import { getNodejsProjects } from "../../db/nodejs";
 import "./NodeJs.scss";
 
-const NodeJs = (id) => {
+const NodeJs = () => {
   const [nodeProjects, setNodeProjects] = useState([]);
 
   useEffect(() => {
-    if (id) {
-      getNodejsProjects(id).then((projects) => {
-        setNodeProjects(projects);
-      });
-    }
-  }, [id]);
-  
+    getNodejsProjects().then((projects) => {
+      setNodeProjects(projects);
+    });
+  }, []);
 
   return (
     <div className="node">
-      {nodeProjects.map((node) => {
-        return (
-          
-            <WebCard
-              backgroundColor="#edf0f2"
-              hrefGallery={`/work/nodejs/${node.id}`}
-              thumbnail={node.thumb}
-              title={node.title}
-              deployUrl={node.deploy}
-              repositorie={node.repository}
-              key={node.id}
-            />
-        );
-      })}
+      <div className="node-block">
+        <div className="container-xl">
+          <div className="row">
+            {nodeProjects.map((node) => {
+              return (
+                <div className="col-11 col-md-6 mx-auto">
+                  <WebCard
+                    backgroundColor="#edf0f2"
+                    hrefGallery={`/work/nodejs/${node.id}`}
+                    thumbnail={node.thumb}
+                    title={node.title}
+                    deployUrl={node.deploy}
+                    repositorie={node.repository}
+                    key={node.id}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

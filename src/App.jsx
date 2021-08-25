@@ -1,4 +1,5 @@
 import "./App.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -14,6 +15,7 @@ import NodeJsDetail from "./pages/NodeJsDetail/NodeJsDetail";
 import Html from "./pages/Html/Html";
 import MenuMobile from "./components/MenuMobile/MenuMobile";
 import ReactDetail from "./pages/ReactDetail/ReactDetail"
+import AngularDetail from "./pages/AngularDetail/AngularDetail";
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
@@ -51,6 +53,7 @@ function App() {
               <Route exact path="/" render={(props) => <Home {...props} />} />
               <Route exact path="/work" render={(props) => <Portfolio  {...props} />} />
               <Route exact path="/work/angular" render={(props) => <Angular {...props}  />} />
+              <Route exact path="/work/angular/:id" render={(props) => <AngularDetail {...props}  />} />
               <Route exact path="/work/react" render={(props) => <ReactComponent {...props}  />} />
               <Route exact path="/work/react/:id" render={(props) => <ReactDetail {...props} />} />
               <Route exact path="/work/nodejs" render={(props) => <NodeJs {...props} />} />

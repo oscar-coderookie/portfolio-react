@@ -4,11 +4,28 @@
     align-items: center;
     justify-content: center;
 
+    &-block{
+        height:80vh;
+        overflow: scroll;
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__container{
         width:1250px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    @media (max-width: 425px) {
+        &-block{
+            align-items: flex-start;
+            padding-top: 20px;
+        }
+        
     }
 }

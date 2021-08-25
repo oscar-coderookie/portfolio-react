@@ -1,28 +1,34 @@
 import "./NodeJsDetail.scss";
 import { useEffect, useState } from "react";
-import GalleryLines from './../../components/GalleryLines/GalleryLines';
 import { getNodejsById } from "../../db/nodejs";
 import { useParams } from "react-router";
+import { Carousel } from "react-bootstrap";
 
 const NodeJsDetail = () => {
-  const [nodeDetails, setNodeDetails] = useState();
+  const [nodeDetails, setNodeDetails] = useState({});
+  const [gallery, setGallery] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     getNodejsById(id).then((nodeProjects) => {
       setNodeDetails(nodeProjects);
+      setGallery(nodeProjects.images);
     });
   }, []);
-  console.log(nodeDetails);
-
-  const gallery = nodeDetails.images;
 
   return (
     <div className="nodejs-detail">
-      <h1>{nodeDetails.id}</h1>
-      <h2>{nodeDetails.title}</h2>
-      <h3>{nodeDetails.thumb}</h3>
-      <GalleryLines/>
+      <div className="container-xl">
+        <Carousel>
+          {gallery.map((img) => {
+            return (
+              <Carousel.Item>
+                <img className="mx-auto" src={img} alt={img} style={{ height: "100%", width: "100%" }} />
+              </Carousel.Item>
+            );
+          })}
+        </Carousel>
+      </div>
     </div>
   );
 };

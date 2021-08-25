@@ -1,19 +1,33 @@
-.angular{
-    height:100vh;
+.angular {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
 
-    &__container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+  &-block {
+    height: 80vh;
+    overflow: scroll;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    @media (max-width: 1024px) {
-        justify-content:center;
-        
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
+  @media (max-width: 425px) {
+    &-block {
+      align-items: flex-start;
+      padding-top: 20px;
     }
+  }
 }
