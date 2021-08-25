@@ -5,16 +5,15 @@ import { useParams } from "react-router";
 import { Carousel } from "react-bootstrap";
 
 const ReactDetail = () => {
-  const [reactProjects, setReactProjects] = useState({});
+
   const [reactImages, setReactImages] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     getReactById(id).then((reactProjects) => {
-      setReactProjects(reactProjects);
       setReactImages(reactProjects.images);
     })
-  }, []);
+  }, [id]);
 
   return (
   <div className="react-detail">
