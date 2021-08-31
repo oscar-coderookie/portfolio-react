@@ -1,11 +1,14 @@
 import SwiperGallery from "./SwiperGallery/SwiperGallery";
-import Hero from "./Hero/Hero";
+
 import Header from "./Header/Header";
 import GalleryLines from "./GalleryLines/GalleryLines";
+import MenuMobile from "./MenuMobile/MenuMobile";
+import Footer from "./Footer/Footer";
 
 export {
     SwiperGallery,
-    Hero,
     Header,
-    GalleryLines
+    GalleryLines,
+    MenuMobile,
+    Footer
 }

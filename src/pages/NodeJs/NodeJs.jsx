@@ -19,7 +19,7 @@ const NodeJs = () => {
           <div className="row">
             {nodeProjects.map((node) => {
               return (
-                <div className="col-11 col-md-6 mx-auto">
+                <div className="col-11 col-md-6 mx-auto" key={node.id}>
                   <WebCard
                     backgroundColor="#edf0f2"
                     hrefGallery={`/work/nodejs/${node.id}`}
@@ -27,7 +27,8 @@ const NodeJs = () => {
                     title={node.title}
                     deployUrl={node.deploy}
                     repositorie={node.repository}
-                    key={node.id}
+                    
+                    icon={node.icon}
                   />
                 </div>
               );

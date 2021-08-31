@@ -1,21 +1,22 @@
 import "./App.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Portfolio from "./pages/Portfolio/Portfolio";
-import Contact from "./pages/Contact/Contact";
-import ReactComponent from "./pages/React/React";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Angular from "./pages/Angular/Angular";
-import NodeJs from "./pages/NodeJs/NodeJs";
-import NodeJsDetail from "./pages/NodeJsDetail/NodeJsDetail";
-import Html from "./pages/Html/Html";
-import MenuMobile from "./components/MenuMobile/MenuMobile";
-import ReactDetail from "./pages/ReactDetail/ReactDetail"
-import AngularDetail from "./pages/AngularDetail/AngularDetail";
+import { Header, Footer, MenuMobile } from "./components";
+
+// lazy loading..
+const Home = lazy(() => import('./pages/Home/Home'));
+const Portfolio = lazy(() => import('./pages/Portfolio/Portfolio'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
+const Angular = lazy(() => import('./pages/Angular/Angular'));
+const AngularDetail = lazy(() => import('./pages/AngularDetail/AngularDetail'));
+const ReactComponent = lazy(() => import('./pages/React/React'));
+const ReactDetail = lazy(() => import('./pages/ReactDetail/ReactDetail'));
+const NodeJs = lazy(() => import('./pages/NodeJs/NodeJs'));
+const NodeJsDetail = lazy(() => import('./pages/NodeJsDetail/NodeJsDetail'));
+const Html = lazy(() => import('./pages/Html/Html'));
+
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);

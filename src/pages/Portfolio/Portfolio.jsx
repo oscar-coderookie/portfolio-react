@@ -15,14 +15,14 @@ const Portfolio = () => {
           {technologicStack.map((stack) => {
             return (
            
-                <NavLink className="portfolio__links" exact to={stack.href} >
+                <NavLink className="portfolio__links" exact to={stack.href}  key={toString(stack.id)}>
                   <CardComponent
                     color={stack.backgroundColor}
                     textColor={stack.textColor}
                     imageUrl={stack.imageUrl}
                     skill={stack.title}
                     legendText={t("legend_stack.1") + stack.title}
-                    key={toString(stack.id)}
+                    
                     cardColor={stack.cardColor}
                     
                   />

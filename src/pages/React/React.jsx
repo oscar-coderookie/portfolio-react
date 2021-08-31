@@ -18,7 +18,7 @@ const React = () => {
           <div className="row">
             {allReact.map((react) => {
               return (
-                <div className="col-11 col-md-6 mx-auto">
+                <div className="col-11 col-md-6 mx-auto" key={react.id} >
                   <WebCard
                     hrefGallery={`/work/react/${react.id}`}
                     backgroundColor="#edf0f2"
@@ -26,7 +26,8 @@ const React = () => {
                     title={react.title}
                     deployUrl={react.deploy}
                     repositorie={react.repository}
-                    key={react.id}
+                    
+                    icon={react.icon}
                   />
                 </div>
               );

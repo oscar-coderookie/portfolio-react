@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import { Carousel } from "react-bootstrap";
 
 const NodeJsDetail = () => {
+  // eslint-disable-next-line
   const [nodeDetails, setNodeDetails] = useState({});
   const [gallery, setGallery] = useState([]);
   const { id } = useParams();
@@ -14,7 +15,7 @@ const NodeJsDetail = () => {
       setNodeDetails(nodeProjects);
       setGallery(nodeProjects.images);
     });
-  }, []);
+  }, [id]);
 
   return (
     <div className="nodejs-detail">

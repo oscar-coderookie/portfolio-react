@@ -20,7 +20,7 @@ const Angular = () => {
             <div className="angular__container">
               {angularProjects.map((page) => {
                 return (
-                  <div className="col-11 col-md-6 mx-auto">
+                  <div className="col-11 col-md-6 mx-auto" key={page.id}>
                     <WebCard
                       hrefGallery={`/work/angular/${page.id}`}
                       backgroundColor="#edf0f2"
@@ -28,7 +28,8 @@ const Angular = () => {
                       title={page.title}
                       deployUrl={page.deploy}
                       repositorie={page.repository}
-                      key={page.id}
+                      
+                      icon={page.icon}
                     />
                   </div>
                 );

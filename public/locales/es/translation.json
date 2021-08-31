@@ -34,6 +34,9 @@
     },
     "repository":{
         "1": "Repository: "
+    },
+    "developed_with": {
+        "1": "Developed with:"
     }
 
 }

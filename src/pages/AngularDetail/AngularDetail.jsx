@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 
 const AngularDetail = () => {
+  // eslint-disable-next-line
   const [angularDetail, setAngularDetail] = useState({});
   const [gallery, setGallery] = useState([]);
   const { id } = useParams();
@@ -14,7 +15,7 @@ const AngularDetail = () => {
       setAngularDetail(detail);
       setGallery(detail.images);
     });
-  }, []);
+  }, [id]);
   console.log(gallery);
 
   return (

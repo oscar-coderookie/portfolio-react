@@ -1,9 +1,7 @@
-import uuid from 'react-uuid';
-
 
 const technologicStack = [
   {
-    id: uuid(),
+    id: 9,
     title: "React Js",
     imageUrl: "https://img.icons8.com/color/240/000000/react-native.png",
     backgroundColor: "#E4E4E4",
@@ -13,7 +11,7 @@ const technologicStack = [
     cardColor: "#80DEEA"
   },
   {
-    id: uuid(),
+    id: 5,
     title: "NodeJs",
     imageUrl: "https://img.icons8.com/color/144/000000/nodejs.png",
     backgroundColor: "#BFBFBF",
@@ -23,7 +21,7 @@ const technologicStack = [
     cardColor: "#4CAF50"
   },
   {
-    id: uuid(),
+    id: 4,
     title: "Angular",
     imageUrl: "https://img.icons8.com/color/144/000000/angularjs.png",
     backgroundColor: "#A7A7A7",
@@ -33,7 +31,7 @@ const technologicStack = [
     cardColor: "#DD2C00"
   },
   {
-    id: uuid(),
+    id: 3,
     title: "HTML & CSS",
     imageUrl: "https://img.icons8.com/color/144/000000/html-5--v1.png",
     backgroundColor: "#929292",
