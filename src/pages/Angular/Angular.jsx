@@ -1,17 +1,23 @@
 import "./Angular.scss";
 import { useState, useEffect } from "react";
-import { getAngularProjects } from "../../db/angular";
 import WebCard from "../../components/WebCard/WebCard";
+import firebase from "../../config/firebase";
 // import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 
+const db = firebase.firestore();
+const Angular_Collection = "angular";
+
 const Angular = () => {
   const [angularProjects, setAngularProjects] = useState([]);
+
   useEffect(() => {
-    getAngularProjects().then((angular) => {
-      setAngularProjects(angular);
+    db.collection(Angular_Collection).onSnapshot((snapshot) => {
+      setAngularProjects(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
+  console.log(angularProjects);
+
   return (
     <div className="angular">
       <div className="angular-block">
@@ -28,7 +34,6 @@ const Angular = () => {
                       title={page.title}
                       deployUrl={page.deploy}
                       repositorie={page.repository}
-                      
                       icon={page.icon}
                     />
                   </div>

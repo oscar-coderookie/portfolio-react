@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import WebCard from "../../components/WebCard/WebCard";
-import { getNodejsProjects } from "../../db/nodejs";
+import firebase from "../../config/firebase";
 import "./NodeJs.scss";
+
+const db = firebase.firestore();
+const NODE_COLLECTION = "nodejs";
 
 const NodeJs = () => {
   const [nodeProjects, setNodeProjects] = useState([]);
 
   useEffect(() => {
-    getNodejsProjects().then((projects) => {
-      setNodeProjects(projects);
+    db.collection(NODE_COLLECTION).onSnapshot((snapshot) => {
+      setNodeProjects(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
 
+  console.log(nodeProjects)
   return (
     <div className="node">
       <div className="node-block">
@@ -27,7 +31,6 @@ const NodeJs = () => {
                     title={node.title}
                     deployUrl={node.deploy}
                     repositorie={node.repository}
-                    
                     icon={node.icon}
                   />
                 </div>

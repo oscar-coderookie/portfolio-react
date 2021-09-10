@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 import WebCard from "../../components/WebCard/WebCard";
-import { getReactProjects } from "../../db/reactjs";
 import "./React.scss";
+import firebase from "../../config/firebase";
+
+const db = firebase.firestore();
+const REACT_COLLECTION = "reactjs";
 
 const React = () => {
   const [allReact, setAllReact] = useState([]);
 
   useEffect(() => {
-    getReactProjects().then((react) => {
-      setAllReact(react);
+    db.collection(REACT_COLLECTION).onSnapshot((snapshot) => {
+      setAllReact(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, []);
+  
   return (
     <div className="react">
       <div className="react-block">
@@ -18,7 +22,7 @@ const React = () => {
           <div className="row">
             {allReact.map((react) => {
               return (
-                <div className="col-11 col-md-6 mx-auto" key={react.id} >
+                <div className="col-11 col-md-6 mx-auto" key={react.id}>
                   <WebCard
                     hrefGallery={`/work/react/${react.id}`}
                     backgroundColor="#edf0f2"
@@ -26,7 +30,6 @@ const React = () => {
                     title={react.title}
                     deployUrl={react.deploy}
                     repositorie={react.repository}
-                    
                     icon={react.icon}
                   />
                 </div>

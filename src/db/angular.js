@@ -5,7 +5,7 @@ export const getAngularProjects = async (id)=> {
     const snapshots = await firebase
     .firestore()
     .collection(ANGULAR_COLLECTION)
-    .get()
+    .onSnapshot();
 
     if (snapshots.empty){
         return [];
