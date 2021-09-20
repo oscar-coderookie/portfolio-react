@@ -23,7 +23,7 @@ const NodeJsDetail = () => {
         <Carousel>
           {gallery.map((img) => {
             return (
-              <Carousel.Item>
+              <Carousel.Item key={img}>
                 <img className="mx-auto" src={img} alt={img} style={{ height: "100%", width: "100%" }} />
               </Carousel.Item>
             );

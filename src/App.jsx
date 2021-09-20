@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, Suspense, lazy } from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Header, Footer, MenuMobile } from "./components";
+import { Header, Footer, MenuMobile, LoadingScreen } from "./components";
 
 // lazy loading..
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -49,7 +49,7 @@ function App() {
         <div className="app">
           {!breakpoint ? <MenuMobile /> : null}
           {breakpoint ? <Header className="app_header" /> : null}
-          <Suspense fallback={<div>Loading...</div>} >
+          <Suspense fallback={<LoadingScreen/>} >
             <Switch>
               <Route exact path="/" render={(props) => <Home {...props} />} />
               <Route exact path="/work" render={(props) => <Portfolio  {...props} />} />

@@ -41,6 +41,7 @@ const Html = () => {
                     repositorie={project.repository}
                     key={project.id}
                     icon={project.icon}
+                    technologies={null}
                   />
                 </div>
               );

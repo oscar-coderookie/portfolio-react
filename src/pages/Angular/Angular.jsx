@@ -35,6 +35,7 @@ const Angular = () => {
                       deployUrl={page.deploy}
                       repositorie={page.repository}
                       icon={page.icon}
+                      technologies={page.technologies}
                     />
                   </div>
                 );

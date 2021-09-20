@@ -21,7 +21,7 @@ const GalleryLines = (props) => {
       onSwiper={(swiper) => console.log(swiper)}
     > {props.array.map((image)=> {
       return (
-        <SwiperSlide>
+        <SwiperSlide key={image}>
         <img className="swiper__img" style={{height: props.height, width: props.width}} src={image} alt={image} key={image} />
         </SwiperSlide>
       )

@@ -31,6 +31,7 @@ const React = () => {
                     deployUrl={react.deploy}
                     repositorie={react.repository}
                     icon={react.icon}
+                    technologies={react.technologies}
                   />
                 </div>
               );
