@@ -2,24 +2,24 @@
     display: flex;
     &__title{
        margin-bottom: 20px;
+       font-size: 24px;
        text-transform: uppercase;
        color:rgb(122, 122, 122);
     }
     &__container{
         display: flex;
-        justify-content:space-between;
+        justify-content:center;
         flex-wrap: wrap;
         align-items: center;
     }
 
     &__fields{
         display: flex;
-        width: 100%;
+        width: 60%;
         align-items: center;
-        justify-content:flex-start;
+        justify-content:center;
         margin: 10px 0px; 
         background: rgba(255, 255, 255, 0.616);   
-        padding: 10px 30px;   
         border-radius: 8px; 
     }
     &__info,
@@ -29,6 +29,7 @@
         color:rgb(94, 94, 94);
         font-weight: 500;
         font-size:18px;
+        font-weight: 400;
         
     }
     &__icon{
@@ -40,7 +41,6 @@
 
     @media (max-width: 768px ) {
         &__fields{
-            padding: 4px 20px;
             width:100%;
         }
         &__info,

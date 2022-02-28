@@ -22,7 +22,7 @@ const React = () => {
           <div className="row">
             {allReact.map((react) => {
               return (
-                <div className="col-11 col-md-6 mx-auto" key={react.id}>
+                <div className="col-11 col-md-11 col-lg-5 mx-auto" key={react.id}>
                   <WebCard
                     hrefGallery={`/work/react/${react.id}`}
                     backgroundColor="#edf0f2"

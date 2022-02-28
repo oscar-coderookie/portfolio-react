@@ -11,14 +11,14 @@ const ContactForm = () => {
     <div className="contact-form">
       <div className="container-xl">
         <div className="row">
-          <div className="col-10 mx-auto">
+          <div className="col-12 mx-auto">
             <div className="contact-form__block1">
               <h1 className="contact-form__title">{t("contact_title.1")}</h1>
               <p className="contact-form__legend">{t("contact_text.1")}</p>
               <div className="contact-form__container">
                 <div className="contact-form__fields">
                   <FontAwesomeIcon className="contact-form__icon" icon={faPhone} />
-                  <p className="contact-form__info">678 13 41 58</p>
+                  <p className="contact-form__info">300 2215207</p>
                 </div>
                 <div className="contact-form__fields">
                   <FontAwesomeIcon className="contact-form__icon" icon={faMailBulk} />
