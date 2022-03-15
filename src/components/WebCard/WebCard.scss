@@ -1,7 +1,7 @@
 .webcard{
     margin: 6px;
     overflow: hidden;
-    filter: drop-shadow(1px 1px 2px gray);
+    filter: drop-shadow(-1px 0px 2px var(--shadow-color));
     border:none;
 
     &__img-container{
@@ -23,7 +23,7 @@
         
     }
     &__title{
-        color: black;
+        color: var(--text-color);
         font-size: 20px;
         margin: 0;
         height: 40px;
@@ -32,12 +32,12 @@
         justify-content: center;
     }
     &__text{
-        color: black;
+        color: var(--text-color);
         font-size: 16px;
     }
     &__links{
         text-decoration: none;
-        
+        color: var(--text-color);
         font-size:16px;
         margin:0;
     }
@@ -55,7 +55,8 @@
         
     }
     &__footer{
-        font-size:16px
+        font-size:16px;
+        color: var(--text-color);
     }
 
     

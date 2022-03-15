@@ -6,6 +6,7 @@ import { faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import spain from "../../img/spain.png";
 import uk from "../../img/uk.png";
+import ThemeChanger from "./../../ThemeChanger";
 
 const Header = () => {
   const ubication = window.location.pathname;
@@ -19,6 +20,7 @@ const Header = () => {
 
   return (
     <div className="header">
+    <ThemeChanger/>
       <nav className="header__navbar">
         {ubication === "/" ? null : (
           <FontAwesomeIcon onClick={() => history.goBack()} className="back-btn" icon={faChevronLeft} />

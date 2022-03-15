@@ -12,7 +12,7 @@
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        color: #747474;
+        color: var(--text-color);
     }
     &__link{
         font-size:16px;
@@ -21,7 +21,7 @@
         margin: 0px 20px;
         font-weight: 400;
         letter-spacing:2px; 
-        color: #747474;
+        color: var(--text-color);
         transition: all .3s ease-in;
         &:hover{
             font-weight: 600;

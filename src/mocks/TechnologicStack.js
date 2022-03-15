@@ -11,10 +11,20 @@ const technologicStack = [
     cardColor: "#80DEEA"
   },
   {
+    id: 7,
+    title: "React Native",
+    imageUrl: "https://img.icons8.com/color/240/000000/react-native.png",
+    backgroundColor: "#BFBFBF",
+    legend: "Projects developed in React Native",
+    href: "/work/react-native",
+    textColor: "#E4E4E4",
+    cardColor: "#597174"
+  },
+  {
     id: 5,
     title: "NodeJs",
     imageUrl: "https://img.icons8.com/color/144/000000/nodejs.png",
-    backgroundColor: "#BFBFBF",
+    backgroundColor: "#AAAAAA",
     legend: "Projects developed in Nodejs",
     href: "/work/nodejs",
     textColor: "#E4E4E4",
@@ -40,6 +50,7 @@ const technologicStack = [
     textColor: "#E4E4E4",
     cardColor: "#FF6D00"
   },
+  
 ];
 
 export default technologicStack;

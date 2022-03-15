@@ -16,6 +16,7 @@ const ReactDetail = lazy(() => import('./pages/ReactDetail/ReactDetail'));
 const NodeJs = lazy(() => import('./pages/NodeJs/NodeJs'));
 const NodeJsDetail = lazy(() => import('./pages/NodeJsDetail/NodeJsDetail'));
 const Html = lazy(() => import('./pages/Html/Html'));
+const ReactNative =  lazy(()=> import ("./pages/ReactNative/ReactNative"))
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
       </Helmet>
       <Router>
         <div className="app">
+      
           {!breakpoint ? <MenuMobile /> : null}
           {breakpoint ? <Header className="app_header" /> : null}
           <Suspense fallback={<LoadingScreen/>} >
@@ -57,6 +59,7 @@ function App() {
               <Route exact path="/work/angular/:id" render={(props) => <AngularDetail {...props}  />} />
               <Route exact path="/work/react" render={(props) => <ReactComponent {...props}  />} />
               <Route exact path="/work/react/:id" render={(props) => <ReactDetail {...props} />} />
+              <Route exact path="/work/react-native" render={(props) => <ReactNative {...props}  />} />
               <Route exact path="/work/nodejs" render={(props) => <NodeJs {...props} />} />
               <Route exact path="/work/nodejs/:id" render={(props) => <NodeJsDetail {...props} />} />
               <Route exact path="/work/html" render={(props) => <Html {...props}  />} />

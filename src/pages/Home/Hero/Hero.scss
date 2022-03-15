@@ -1,7 +1,7 @@
 .hero{
     height:100vh;
     width:100%;
-    background: linear-gradient(to bottom,rgb(201, 201, 201), rgb(240, 240, 240) , rgb(190, 190, 190));
+    background: linear-gradient(to bottom,var(--primary-color),var(--secondary-color));
     align-items: center;
     display: flex;
     justify-content: center;

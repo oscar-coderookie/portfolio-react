@@ -1,4 +1,4 @@
-.angular {
+.react-native {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -20,15 +20,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  @media (max-width: 1024px) {
-    justify-content: center;
-  }
-  @media (max-width: 425px) {
-    &-block {
-      align-items: flex-start;
-      padding-top: 20px;
-    }
   }
 }

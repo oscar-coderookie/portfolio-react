@@ -31,9 +31,9 @@ const Html = () => {
           <div className="row">
             {htmlProjects.map((project) => {
               return (
-                <div className="col-11 col-lg-6 mx-auto" key={project.id}>
+                <div className="col-11 col-lg-5 mx-auto" key={project.id}>
                   <WebCard
-                    backgroundColor="#edf0f2"
+                    backgroundColor="var(--primary-color)"
                     thumbnail={null}
                     height={'auto'}
                     title={project.title}

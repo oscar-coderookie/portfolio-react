@@ -4,7 +4,7 @@
        margin-bottom: 20px;
        font-size: 24px;
        text-transform: uppercase;
-       color:rgb(122, 122, 122);
+       color: var(--text-color);
     }
     &__container{
         display: flex;
@@ -19,14 +19,14 @@
         align-items: center;
         justify-content:center;
         margin: 10px 0px; 
-        background: rgba(255, 255, 255, 0.616);   
+        background: var(--primary-color);   
         border-radius: 8px; 
     }
     &__info,
     &__legend{
         margin:20px 0px;
         padding: 0;
-        color:rgb(94, 94, 94);
+        color: var(--text-color);
         font-weight: 500;
         font-size:18px;
         font-weight: 400;
@@ -34,7 +34,7 @@
     }
     &__icon{
         font-size: 30px;
-        color: rgb(94, 94, 94);
+        color: var(--text-color);
         margin-right: 10px;
         
     }
